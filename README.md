@@ -4,7 +4,7 @@ A useless HTTP server for demonstration purposes.
 
 ## Deployed links:
 
-- https://<my-app-name>.herokuapp.com
+- [Heroku Link](https://basic-express-server-bc.herokuapp.com/person)
 
 ## UML
 
