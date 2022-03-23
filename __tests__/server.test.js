@@ -22,12 +22,12 @@ describe('Testing Server', () => {
   });
 
   it('Respond with a status 200 if the name is in the query string', async () => {
-    const response = await request.get('/person?name=name'); 
+    const response = await request.get('/person?name=somename'); 
     expect(response.status).toEqual(200);
   });
 
   it('Respond to a GET request given a name in the query string, the output object is correct', async () => {
-    const response = await request.get('/person?name=name'); 
+    const response = await request.get('/person?name=somename'); 
     expect(response.body).toEqual('obj');
   });
 
