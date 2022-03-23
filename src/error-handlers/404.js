@@ -1,7 +1,6 @@
 'use strict';
 
-function handleError404(err, req, res, next){
-  console.log('Error', err);
+function handleError404(req, res, next){
   res.status(404).send('not found');
   next();
 }
