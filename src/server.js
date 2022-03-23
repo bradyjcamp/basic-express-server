@@ -7,12 +7,17 @@ const handleError404 = require('./error-handlers/404');
 const logger = require('./middleware/logger');
 const app = express();
 
+app.use(express.json());
+
+app.use(logger);
+
+app.get('/person', validator, (req, res, next) => {
+  res.send({name: req.query.name});
+});
 
 
-app.get('/person', logger, validator);
-
+app.use(handleError404);
 app.use(handleError500);
-app.use('*', logger, handleError404);
 
 module.exports = {
   app,
